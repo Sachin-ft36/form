@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ff0000, #c27ba0);
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            margin-top: 30px;
+            font-size: 2rem;
+        }
+
+        .feedbackform {
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            margin-top: 0px;
+        }
+
+        form {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+            background-color: rgb(243, 244, 245);
+            padding: 40px;
+            border-radius: 10px;
+            width: 400px;
+        }
+
+      
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="url"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea {
+            height: 80px;
+        
+        }
+
+        .rating {
+    margin-bottom: 15px;
+    
+}
+
+
+
+
+
+        .check {
+            margin-bottom: 15px;
+        }
+
+        .check label {
+            color: black;
+        }
+
+        button {
+            width: 50%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feedback Form</h1>
+    <div class="feedbackform">
+        <form action="">
+            <div>
+                <label for="type">Feedback Type:</label>
+                <select name="type" class="select">
+                    <option value="compliment">Compliment</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="complaint">Complaint</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message-box"></textarea>
+            </div>
+            
+            <div class="rating">
+                <label  for="rating">Website Rating:</label> <br>
+                <label><input type="radio" name="rating" value="Excellent"> Excellent</label>
+                <label><input type="radio" name="rating" value="Good"> Good</label>
+                <label><input type="radio" name="rating" value="Average"> Average</label>
+                <label><input type="radio" name="rating" value="Poor"> Poor</label>
+            </div>
+
+            <div>
+                <label for="age">Age (10-100):</label>
+                <input id="age" class="age" type="number" min="10" max="100">
+            </div>
+
+            <div>
+                <label for="email">Email <span style="color: red;">*</span>:</label>
+                <input id="email" class="email" type="email" required>
+            </div>
+
+            <div>
+                <label for="password">Password (min. 8 characters):</label>
+                <input id="password" class="password" type="password" minlength="8">
+            </div>
+
+            <div>
+                <label for="url">Website URL (optional):</label>
+                <input id="url" class="url" type="url">
+            </div>
+
+            <div class="check">
+                <label><input type="checkbox" required> I agree to the terms and conditions</label>
+            </div>
+
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
